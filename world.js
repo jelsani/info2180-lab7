@@ -21,5 +21,5 @@ function countrySearch(){
     }
     
     httprequest.open("GET",url,true);
-    httprequest.send("");
+    httprequest.send("result");
 }
