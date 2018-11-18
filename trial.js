@@ -1,6 +1,6 @@
-window.onload =function (){
+function start(){
 
-	controls = getElementsByTagName('controls');
+	controls = getElementsById('controls');
 
 
 	//onclick = (result==country)?//
@@ -9,12 +9,14 @@ window.onload =function (){
 	result=="country"
 	console.log("result");>*/
 }
-button.onclick = 
-function countrySearch();{
-	if(country in world)? = true{
+
+button.onclick = function countrySearch(){
+	if (country in world) {
 		console.log(getElementsByTagName('result'+ country))
-	}
-}
+	};
+};
+	
+
 
 
 	

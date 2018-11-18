@@ -1,4 +1,3 @@
-"use strict";
 function countrySearch(){
     var query = document.getElementById("country").value;
     var httprequest = new XMLHttpRequest();
