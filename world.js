@@ -1,24 +1,28 @@
-function countrySearch(){
-    var query = document.getElementById("country").value;
-    var httprequest = new XMLHttpRequest();
-    httprequest.onreadystatechange = function()
-    {
-        if (this.readyState == 4 && this.status == 200)
-        {
+/*window.onload = function(){
+   document.getElementById()
+}
+*/
+
+//document.getElementById("lookup").addEventListener("click", world);
+
+function world(){
+    var xhttp = new XMLHttpRequest();
+    var word = document.getElementById('country').value;
+    var check = document.getElementById('checking').checked;
+    var url = "https://info2180-lab7-termin4321.c9users.io/world.php?country="+ word;
+    
+    if (check == true){
+         var url = "https://info2180-lab7-termin4321.c9users.io/world.php?all="+ check;
+    }else {
+         var url = "https://info2180-lab7-termin4321.c9users.io/world.php?country="+ word;
+    }
+    
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
             document.getElementById("result").innerHTML = this.responseText;
-            alert(this.responseText.replace(/<\/?[^>]+(>|$)/g, " ")); // Regular Expression to remove HTML Tags 
+            alert(this.responseText);
         }
-    };
-    
-    if (document.getElementById('allChkBox').checked)
-    {
-        var url = "world.php?all=true";
     }
-    else
-    {
-        var url = "world.php?country="+query;
-    }
-    
-    httprequest.open("GET",url,true);
-    httprequest.send("result");
+     xhttp.open("GET", url);
+     xhttp.send();
 }
