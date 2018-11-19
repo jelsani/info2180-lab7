@@ -9,12 +9,12 @@ function world(){
     var xhttp = new XMLHttpRequest();
     var word = document.getElementById('country').value;
     var check = document.getElementById('checking').checked;
-    var url = "https://info2180-lab7-termin4321.c9users.io/world.php?country="+ word;
+    var url = "https://info2180-lab7-jelsani.c9users.io/world.php?country="+ word;
     
     if (check == true){
-         var url = "https://info2180-lab7-termin4321.c9users.io/world.php?all="+ check;
+         var url = "https://info2180-lab7-jelsani.c9users.io/world.php?all="+ check;
     }else {
-         var url = "https://info2180-lab7-termin4321.c9users.io/world.php?country="+ word;
+         var url = "https://info2180-lab7-jelsani.c9users.io/world.php?country="+ word;
     }
     
     xhttp.onreadystatechange = function(){
